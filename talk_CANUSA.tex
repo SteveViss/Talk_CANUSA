@@ -1,0 +1,92 @@
+\documentclass[10pt,aspectratio=149]{beamer}
+
+\usecolortheme{Calm}
+\usetheme{Calm}
+
+%%\usepackage{minted}
+%%\usemintedstyle{pastie}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{shapes, arrows, positioning}
+
+\author{Steve Vissault, Matthew Talluto, \\
+Isabelle Boulangeat and Dominique Gravel}
+\title{Difficult migration of temperate tree species \\
+in the boreal forest under climate change?}
+\date{\today}
+\institute{Université du Québec à Rimouski}
+
+\begin{document}
+
+
+\begin{frame}[plain]
+   \titlepage
+\end{frame}
+
+\begin{frame}
+   \frametitle{Introduction}
+   \framesubtitle{SDM}
+   \paper{references}
+
+   frame content
+   
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Generality of the model 
+
+\begin{frame}{New approach}{State and Transitional Model}
+
+\begin{columns}[c]
+	\begin{column}[c]{.40\paperwidth}
+		\begin{figure}
+			\small{\input{Figs/initfig.tikz}}
+		\end{figure}
+	\end{column}
+	\begin{column}[l]{.40\paperwidth}
+		\begin{itemize}
+			\item Lanscape modelling scale
+			\item 4 States (\textbf{R},\textbf{B},\textbf{T},\textbf{M})
+			\item \textbf{R} corresponds to a post-disturbance patch
+			\item Probability of transition given climatic conditions
+			\item Discrete time and stochastic model
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Paremeters description 
+
+\begin{frame}{Methods}{State and Transitional Model}
+
+\begin{columns}[c]
+	\begin{column}[c]{.40\paperwidth}
+		\begin{figure}
+			\small{\input{Figs/fig1.tikz}}
+		\end{figure}
+	\end{column}
+	\begin{column}[l]{.40\paperwidth}
+	\textbf{Parameters}:
+	\begin{itemize}
+		\item $\beta$: Colonization rate\\
+		\item $\theta$: Succession rate\\
+		\item $\phi$: Regeneration functions\\
+		\item $\epsilon$: Disturbance rate.
+	\end{itemize}
+	\vspace{1em}
+	\textbf{Each rate depends of}:
+		\begin{itemize}
+			\item Proportion of states available in the system
+			\item Climatic conditions encounter by the patch
+		\end{itemize}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+
+\end{document}
