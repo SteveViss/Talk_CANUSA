@@ -1,0 +1,39 @@
+\begin{center}
+
+\tikzstyle{noeud}=[circle,
+	thick,
+	minimum size = 0.1cm,
+	inner sep =5pt,
+	draw=QUICCgreen,
+	fill=QUICCgreen]
+
+\tikzstyle{noeud2}=[circle,
+	thick,
+	minimum size = 0.1cm,
+	inner sep =5pt,
+	draw=red,
+	fill=red]
+
+\begin{tikzpicture}[->,>=stealth',auto,scale=0.20]
+	\node [circle,noeud] (M) at (0,0) {\color{white}\textbf{M}};
+	\node [circle,noeud] (B) at (-5,5) {\color{white}\textbf{B}};
+	\node [circle,noeud] (T) at (5,5) {\color{white}\textbf{T}};
+	\node [circle,noeud2] (R) at (0,10) {\color{white}\textbf{R}};
+
+	\draw[thick,-latex] (M) to[bend right=10] node[above,sloped] {} (B);
+	\draw[thick,-latex] (B) to[bend right=10] node[below,sloped] {} (M);
+
+	\draw[thick,-latex] (T) to[bend right=10] node[above,sloped] {} (M);
+	\draw[thick,-latex] (M) to[bend right=10] node[below,sloped] {} (T);
+
+	\draw[thick,-latex,red] (T) to[bend right=10] node[above,sloped] {} (R);
+	\draw[thick,-latex] (R) to[bend right=10] node[below,sloped] {} (T);
+
+	\draw[thick,-latex] (R) to[bend right=10] node[above,sloped] {} (B);
+	\draw[thick,-latex,red] (B) to[bend right=10] node[below,sloped] {} (R);
+
+	\draw[thick,-latex,transform canvas={xshift=0.6ex}] (R) to node[above,sloped] {} (M);
+	\draw[thick,-latex,transform canvas={xshift=-0.6ex},red] (M) to node[above,sloped] {} (R);
+\end{tikzpicture}
+\end{center}
+
