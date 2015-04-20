@@ -1,24 +1,35 @@
 \begin{center}
 
-\tikzstyle{noeud}=[circle,
+\tikzstyle{Temperate}=[circle,
 	thick,
-	minimum size = 0.1cm,
+	minimum size = 0.5cm,
 	inner sep =5pt,
-	draw=QUICCgreen,
-	fill=QUICCgreen]
-
-\tikzstyle{noeud2}=[circle,
+	draw=Temperate,
+	fill=Temperate]
+\tikzstyle{Boreal}=[circle,
 	thick,
-	minimum size = 0.1cm,
+	minimum size = 0.5cm,
 	inner sep =5pt,
-	draw=red,
-	fill=red]
+	draw=Boreal,
+	fill=Boreal]
+\tikzstyle{Regeneration}=[circle,
+	thick,
+	minimum size = 0.5cm,
+	inner sep =5pt,
+	draw=Regeneration,
+	fill=Regeneration]
+\tikzstyle{Mixed}=[circle,
+	thick,
+	minimum size = 0.5cm,
+	inner sep =5pt,
+	draw=Mixed,
+	fill=Mixed]
 
 \begin{tikzpicture}[->,>=stealth',auto,scale=0.20]
-	\node [circle,noeud] (M) at (0,0) {\color{white}\textbf{M}};
-	\node [circle,noeud] (B) at (-5,5) {\color{white}\textbf{B}};
-	\node [circle,noeud] (T) at (5,5) {\color{white}\textbf{T}};
-	\node [circle,noeud2] (R) at (0,10) {\color{white}\textbf{R}};
+	\node [circle,Mixed] (M) at (0,0) {\color{white}\textbf{M}};
+	\node [circle,Boreal] (B) at (-5,5) {\color{white}\textbf{B}};
+	\node [circle,Temperate] (T) at (5,5) {\color{white}\textbf{T}};
+	\node [circle,Regeneration] (R) at (0,10) {\color{white}\textbf{R}};
 
 	\draw[thick,-latex] (M) to[bend right=10] node[above,sloped] {} (B);
 	\draw[thick,-latex] (B) to[bend right=10] node[below,sloped] {} (M);
