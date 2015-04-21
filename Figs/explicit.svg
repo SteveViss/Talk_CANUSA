@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.65384612"
-     inkscape:cx="-46.080601"
-     inkscape:cy="1276.5033"
+     inkscape:zoom="0.65129203"
+     inkscape:cx="323.05697"
+     inkscape:cy="257.53473"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -36,7 +36,7 @@
      inkscape:guide-bbox="true"
      inkscape:window-width="1366"
      inkscape:window-height="711"
-     inkscape:window-x="1920"
+     inkscape:window-x="0"
      inkscape:window-y="22"
      inkscape:window-maximized="1">
     <sodipodi:guide
@@ -59,6 +59,14 @@
        orientation="1,0"
        position="-90.842429,837.65264"
        id="guide3915" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="592.66808,471.37073"
+       id="guide3808" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="717.03625,13.818686"
+       id="guide3810" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -276,7 +284,7 @@
        xml:space="preserve"
        id="flowRoot4308-8-7-5"
        style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
-       transform="matrix(2.2317608,0,0,2.2317608,755.6539,1810.2208)"><flowRegion
+       transform="matrix(2.2317608,0,0,2.2317608,1394.3843,1829.1897)"><flowRegion
          id="flowRegion4310-9-0-4"><rect
            id="rect4312-9-3-3"
            width="192.38013"
@@ -295,7 +303,7 @@
        xml:space="preserve"
        id="flowRoot4308-8"
        style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
-       transform="matrix(2.2317608,0,0,2.2317608,756.98877,2171.6911)"><flowRegion
+       transform="matrix(2.2317608,0,0,2.2317608,1401.8607,2287.4927)"><flowRegion
          id="flowRegion4310-9"><rect
            id="rect4312-9"
            width="148.7683"
