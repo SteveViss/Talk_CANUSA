@@ -1,3 +1,10 @@
+%% Suggestion dom:
+%% Plus fluide
+%% Résultats plus punché et vendre
+%% Timestep par années
+%% Diapo conclu
+%% Ajouter +4
+
 \documentclass[10pt,aspectratio=149]{beamer}
 
 \usecolortheme{Calm}
@@ -16,10 +23,8 @@
 
 \setbeamertemplate{itemize items}[circle]
 
-\usepackage[font=footnotesize,skip=3pt]{caption}
-\captionsetup[figure]{labelformat=empty}
-\captionsetup[table]{labelformat=empty}
 \setbeamerfont{alerted text}{series=\bfseries}
+\setbeamertemplate{caption}{\insertcaption} \setbeamertemplate{caption label separator}{}
 
 \author{Steve Vissault, Matthew Talluto, \\
 Isabelle Boulangeat and Dominique Gravel}
@@ -85,11 +90,13 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 	        \centering
 	        \begin{figure}
 	          \includegraphics[width=0.75\linewidth]{Figs/sugar.jpg}
+	           \vspace{-1em}
 	          \caption{\textbf{Sugar maple}}
 	          \vspace{-2.5em}
 	        \end{figure}
 	        \begin{figure}
 	          \includegraphics[width=0.75\linewidth]{Figs/birch.jpg}
+	           \vspace{-1em}
 	          \caption{\textbf{Yellow birch}}
 	          \vspace{-2.5em}
 	        \end{figure}
@@ -99,11 +106,13 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 	        \centering
 	        \begin{figure}
 	          \includegraphics[width=0.75\linewidth]{Figs/oak.jpg}
+	           \vspace{-1em}
 	          \caption{\textbf{Red oak}}
 	          \vspace{-2.5em}
 	        \end{figure}
 	        \begin{figure}
 	          \includegraphics[width=0.75\linewidth]{Figs/ash.jpg}
+	           \vspace{-1em}
 	          \caption{\textbf{American ash}}
 	          \vspace{-2.5em}
 	        \end{figure}
@@ -127,6 +136,8 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 \begin{frame}[t]{Context}{Predicted future species distribution}
 
 2. Several temperate forest species are predicted to \textbf{shift northward} under climate change
+	
+% Commencer à aborder le take home
 
 	\begin{figure}
 		\includegraphics[width=.40\paperwidth]{Figs/sugar_map_distrib.jpg}
@@ -134,6 +145,8 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 	\end{figure}
 
    \paper{McKenney \textit{et al}, 2007}
+
+%%% Introduction take home: Dissociation 
 
 \end{frame}
 
@@ -153,19 +166,12 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 		\begin{enumerate}
 			\item Limited dispersions
 			\item Slow population dynamics
-			\item Successional stages (dynamic communities)
+			\item Interspecific competition
 		\end{enumerate}
 \vspace{1em}
-\pause
-\textbf{To predict species or communities range shift we need to include:}
-	\begin{itemize}
-		\item Spatial interactions (e.g. competition)
-		\item Population demography
-	\end{itemize}
-
 	%% remplacer par titre des axes
 	\pause
-	\alert{These components will be effected by future climate}
+	\alert{These components will be affected by future climate}
   \paper{Travis \textit{et al}, 2013}
 \end{frame}
 
@@ -175,13 +181,14 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 %%% Tools
 
 \begin{frame}{Context}{Modelling compromise}
-	
 		\begin{figure}
 			\includegraphics[width=1.2\paperheight]{Figs/schema_models.pdf}
 		\end{figure}
 \paper{Scheller and Mladenoff \textit{et al}, 2006; Kriticos \textit{et al}, 2013}
-\end{frame}
+%%% SDMs implicit demography/interaction
+%%% STMs demo implicit
 
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Objective
@@ -192,14 +199,14 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 
 %%% Carte domaine bioclimatique + renforcer dichotomie fonctionnement écosystème
 
-\begin{frame}{Study ojective}
+\begin{frame}{Study objective}
 
 \textbf{Main objective:} Assess range shift and migration rates of the temperate forest community toward boreal forest under climate change.
 
 \pause 
 
 \vspace{1em}
-\textbf{Why ?}
+\textbf{Why?}
 		\begin{itemize}
 			\item Predict the future distribution of temperate species community in Quebec
 		 	\item Improve and adapt our forests management practices under climate change
@@ -213,23 +220,25 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 
 \begin{frame}{New approach}{States and Transitions Model}
 
+%% Passer plus de temps sur les transitions
+
 \begin{columns}[t]
 	\begin{column}[t]{.40\paperwidth}
 		\begin{figure}
 			\small{\input{Figs/fig_wo_params.tikz}}
 		\end{figure}
 	\end{column}
-	\begin{column}[t]{.50\paperwidth}
+	\begin{column}{.50\paperwidth}
 	\textbf{Model Description}
 		\begin{itemize}
 			\item Lanscape scale
 			\item \textbf{4 States:}
 			\begin{itemize}
-				\item \textcolor{Temperate}{\textbf{T}}, Temperate forest patch
-				\item \textcolor{Mixed}{\textbf{M}}, Mixed forest patch
-				\item \textcolor{Boreal}{\textbf{B}}, Boreal forest patch
+				\item \textcolor{Temperate}{\textbf{T}}, Temperate
+				\item \textcolor{Boreal}{\textbf{B}}, Boreal
+				\item \textcolor{Mixed}{\textbf{M}}, Mixed
+				\item \textcolor{Regeneration}{\textbf{R}}, corresponds to a post-disturbance
 			\end{itemize}
-			\item \textcolor{Regeneration}{\textbf{R}} corresponds to a post-disturbance patch
 			\item Spatially explicit and stochastic model
 		\end{itemize}
 	\end{column}
@@ -239,111 +248,39 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Generality of the model 
 
-\begin{frame}{New approach}{Classification}
+% \begin{frame}{New approach}{Classification}
 
-\begin{columns}[t]
-	\begin{column}[t]{.40\paperwidth}
-		\begin{figure}
-			\small{\input{Figs/fig_wo_params.tikz}}
-		\end{figure}
-	\end{column}
-	\begin{column}[t]{.50\paperwidth}
-	\centering \textbf{Criteria:} Presence/absence 
-	\begin{table}
-		\begin{tabular}{|c|c|}
-		\hline
-		\textbf{State} & \textbf{Species}            \\ \hline
-		\textcolor{Boreal}{\textbf{B}}     & White spruce       \\
-		\textcolor{Boreal}{\textbf{B}}     & Black spruce       \\
-		\textcolor{Boreal}{\textbf{B}}     & Hemelock         \\
-		\textcolor{Boreal}{\textbf{B}}     & Balsam fir etc.        \\ \hline
-		\textcolor{Temperate}{\textbf{T}}     & White ash        \\
-		\textcolor{Temperate}{\textbf{T}}     & Red maple   \\
-		\textcolor{Temperate}{\textbf{T}}     & Sugar maple \\
-		\textcolor{Temperate}{\textbf{T}}     & American beech etc.    \\ \hline
-		\textcolor{Mixed}{\textbf{M}}     & Presence of both species (\textcolor{Temperate}{\textbf{T}} and \textcolor{Boreal}{\textbf{B}}) \\ \hline
-		\textcolor{Regeneration}{\textbf{R}}     &  $Ba  \leq 10m_2/ha $  \\ \hline
+% \begin{columns}[t]
+% 	\begin{column}[t]{.40\paperwidth}
+% 		\begin{figure}
+% 			\small{\input{Figs/fig_wo_params.tikz}}
+% 		\end{figure}
+% 	\end{column}
+% 	\begin{column}{.50\paperwidth}
+% 		\centering\textbf{Criteria:} Presence/absence 
+% 	\begin{table}
+% 	\scriptsize
+% 	\centering
+% 		\begin{tabular}{|c|c|}
+% 		\hline
+% 		\textbf{State} & \textbf{Composition}            \\ \hline
+% 		\textcolor{Boreal}{\textbf{B}}     & White spruce       \\
+% 		\textcolor{Boreal}{\textbf{B}}     & Black spruce       \\
+% 		\textcolor{Boreal}{\textbf{B}}     & Jack pine        \\
+% 		\textcolor{Boreal}{\textbf{B}}     & Balsam fir, etc.        \\ \hline
+% 		\textcolor{Temperate}{\textbf{T}}     & White ash        \\
+% 		\textcolor{Temperate}{\textbf{T}}     & Red maple   \\
+% 		\textcolor{Temperate}{\textbf{T}}     & Sugar maple \\
+% 		\textcolor{Temperate}{\textbf{T}}     & American beech, etc.    \\ \hline
+% 		\textcolor{Mixed}{\textbf{M}}     & Presence of both species (\textcolor{Temperate}{\textbf{T}} and \textcolor{Boreal}{\textbf{B}}) \\ \hline
+% 		\textcolor{Regeneration}{\textbf{R}}     &  $Ba  \leq 10m_2/ha $  \\ \hline
+% 		\end{tabular}
+% 		\caption{\scriptsize \textbf{*}\textit{Ba} means basal area ($m_{2}$/ha)}
+% 		\end{table}
+% 	\end{column}
+% \end{columns}
 
-		\end{tabular}
-			\caption{ \textbf{*}\textit{Ba} means basal area ($m_{2}$/ha)}
-		\end{table}
-	\end{column}
-\end{columns}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Paremeters description : Colonisation
-
-\begin{frame}{New approach}{States and Transitions Model}
-
-%% Replacer par les noms à la place des paramètres
-
-\begin{columns}[t]
-	\begin{column}[t]{.40\paperwidth}
-		\begin{figure}
-			\small{\input{Figs/fig_params_colo.tikz}}
-		\end{figure}
-	\end{column}
-	\begin{column}[t]{.50\paperwidth}
-	\textbf{Ecological processes}:
-	\begin{itemize}
-		\item Colonization
-	\end{itemize}
-	\end{column}
-\end{columns}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Paremeters description : Exclusion
-
-\begin{frame}{New approach}{States and Transitions Model}
-
-%% Replacer par les noms à la place des paramètres
-
-\begin{columns}[t]
-	\begin{column}[t]{.40\paperwidth}
-		\begin{figure}
-			\small{\input{Figs/fig_params_compet.tikz}}
-		\end{figure}
-	\end{column}
-	\begin{column}[t]{.50\paperwidth}
-	\textbf{Ecological processes}:
-	\begin{itemize}
-		\item Colonization
-		\item Competitive exclusion
-	\end{itemize}
-	\end{column}
-\end{columns}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Paremeters description : Succession
-
-\begin{frame}{New approach}{States and Transitions Model}
-
-%% Replacer par les noms à la place des paramètres
-
-\begin{columns}[t]
-	\begin{column}[t]{.40\paperwidth}
-		\begin{figure}
-			\small{\input{Figs/fig_params_succession.tikz}}
-		\end{figure}
-	\end{column}
-	\begin{column}[t]{.50\paperwidth}
-	\textbf{Ecological processes}:
-	\begin{itemize}
-		\item Colonization
-		\item Competitive exclusion
-		\item Succession
-	\end{itemize}
-	\end{column}
-\end{columns}
-
-\end{frame}
+% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Paremeters description : Disturbance
@@ -361,15 +298,87 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 	\begin{column}[t]{.50\paperwidth}
 	\textbf{Ecological processes}:
 	\begin{itemize}
-		\item Colonization
-		\item Competitive exclusion
-		\item Succession
 		\item Disturbance
 	\end{itemize}
 	\end{column}
 \end{columns}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Paremeters description : Succession
+
+\begin{frame}{New approach}{States and Transitions Model}
+
+
+\begin{columns}[t]
+	\begin{column}[t]{.40\paperwidth}
+		\begin{figure}
+			\small{\input{Figs/fig_params_succession.tikz}}
+		\end{figure}
+	\end{column}
+	\begin{column}[t]{.50\paperwidth}
+	\textbf{Ecological processes}:
+	\begin{itemize}
+		\item Disturbance
+		\item Succession
+	\end{itemize}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Paremeters description : Colonisation
+
+\begin{frame}{New approach}{States and Transitions Model}
+
+
+\begin{columns}[t]
+	\begin{column}[t]{.40\paperwidth}
+		\begin{figure}
+			\small{\input{Figs/fig_params_colo.tikz}}
+		\end{figure}
+	\end{column}
+	\begin{column}[t]{.50\paperwidth}
+	\textbf{Ecological processes}:
+	\begin{itemize}
+		\item Disturbance
+		\item Succession
+		\item Colonization
+	\end{itemize}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Paremeters description : Exclusion
+
+\begin{frame}{New approach}{States and Transitions Model}
+
+
+\begin{columns}[t]
+	\begin{column}[t]{.40\paperwidth}
+		\begin{figure}
+			\small{\input{Figs/fig_params_compet.tikz}}
+		\end{figure}
+	\end{column}
+	\begin{column}[t]{.50\paperwidth}
+	\textbf{Ecological processes}:
+	\begin{itemize}
+		\item Disturbance
+		\item Succession
+		\item Colonization
+		\item Competitive exclusion
+	\end{itemize}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Paremeters description : Full
@@ -387,10 +396,10 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 	\begin{column}[t]{.50\paperwidth}
 	\textbf{Ecological processes}:
 	\begin{itemize}
+		\item Disturbance
+		\item Succession
 		\item Colonization
 		\item Competitive exclusion
-		\item Succession
-		\item Disturbance
 	\end{itemize}
 	\vspace{1em}
 	\textbf{Each probability depends on}:
@@ -426,21 +435,23 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 	\begin{columns}[t]
 	\begin{column}[c]{.45\paperwidth}
 	\begin{enumerate}
-			\item \textbf{Classify state of each plot}
+	\onslide<1->{
+	\item \textbf{Classify state of each plot}
 		\begin{itemize}
 			\item Plot remeasured
 			\item Transition observed between remeasurements
-			\item Past-climate of the plot over 15 years
-		\end{itemize}
-			\item \textbf{Compute state transition probabilities} based on the actual climate and neighbors plot states.
-	\end{enumerate}
+		\end{itemize}}
 
+	\onslide<3->{\item \textbf{Compute state transition probabilities} based on the actual climate and neighbors plot states.}
+	\end{enumerate}
 	\end{column}
 	\begin{column}[c]{.50\paperwidth}
 	\vspace{-3em}
+	\onslide<2->{
 		\begin{figure}
+			\pause
 			\includegraphics[width=.51\paperwidth]{Figs/distrib_carto.pdf}
-		\end{figure}
+		\end{figure}}
 	\end{column}
 \end{columns}
 
@@ -451,6 +462,8 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 %% Transition probabilities
 
 \begin{frame}{Calibration}{Transition probabilities over climatic gradients}
+%% Mieux expliquer transition T vers M
+%% Inverser légende
 
 	  \begin{columns}[t]
         \begin{column}{0.15\linewidth}
@@ -462,7 +475,7 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 		\hspace{1em}
         \begin{column}{0.82\linewidth}
             \begin{figure}
-	          \includegraphics[width=1\linewidth]{Figs/betab.pdf}
+	          \includegraphics[width=1\linewidth]{Figs/betat.pdf}
 	        \end{figure}
         \end{column}
       \end{columns}
@@ -484,13 +497,15 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Results
 
-\begin{frame}[t]{Results}{Predict the actual landscape}
+\begin{frame}[t]{Results}{Predict the current landscape}
 
 		\begin{figure}
-			\centering\textbf{Actual states distributions predicted by the STM on climatology: 1970-2000}
+			\centering\textbf{Current states distributions predicted on climatology: 1970-2000}
 			\includegraphics[width=0.9\paperwidth]{Figs/338_500ts_final_land.pdf}
 		\end{figure}
 
+%% Ajouter figure domaines bioclimatiques
+%% Prédiction avec le paysage à l'équilibre avec le climat
 
 \end{frame}
 
@@ -498,51 +513,80 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Results
 
-\begin{frame}[t]{Results}{Futur predicted landscape}
+\begin{frame}[t]{Results}{Predict the current landscape}
 
 		\begin{figure}
-			\centering\textbf{Temperature increase linearly (2°C): 2100}
+			\centering\textbf{Temperature increase linearly (4°C): 2100}
 			\includegraphics[width=0.9\paperwidth]{Figs/338_withcc_final_land.pdf}
 		\end{figure}
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Results
 
+\begin{frame}[t]{Results}{Migration rate predicted}
+
+		\begin{figure}
+			\includegraphics[width=0.9\paperwidth]{Figs/fut_range.pdf}
+		\end{figure}
+		%% Ajouter SDM
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 
+
+\begin{frame}{Summary}
+
+		\begin{enumerate}
+			\item Spatial dynamique, demography and species interactions constraint temperate migration
+			\item Slow temperate migration rate predicted by the STM
+			\item Tension between potential and realized distribution (at equilibrium with climate)
+		\end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Ajouter slide conclu
+% Take home: Création d'une tension entre distrib potentielle et distrib observé 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Results
 
-\begin{frame}[plain]{Aknowledgements}
-
-\begin{columns}[t]
-	\begin{column}[t]{.40\paperwidth}
+\begin{frame}[t]{Aknowledgements}
+\vspace{-1em}
+\begin{center}
 		\begin{figure}
-			\includegraphics[width=0.7\linewidth]{logo.png}
+			\includegraphics[width=0.3\paperwidth]{logo.png}
 		\end{figure}
-		\vspace{2em}
+		\vfill
 		\centering \small{\textbf{Funded by}}
+		\vfill
 		\begin{figure}
-			\includegraphics[width=0.5\linewidth]{nserc.png}
+			\includegraphics[width=0.2\paperwidth]{nserc.png}
 		\end{figure}
+		\vfill
+		\centering \small{\textbf{In collaboration with}}
+		\vfill
+\begin{columns}[t]
+	\begin{column}{0.19\linewidth}
+		\includegraphics[width=0.15\paperwidth]{Figs/logo/logo_11_ORMN.png}			
 	\end{column}
-	\begin{column}[t]{.50\paperwidth}
-
-	Part of the QUICC-FOR project focusing on the impact of climate change on forest productivity in Eastern Canada.
-
-	\vspace{3em}
-
-	\textbf{Thanks to my supervisors and contributors}
-
-	\begin{itemize}
-		\item Dominique Gravel
-		\item Matthew Talluto
-		\item Isabelle Boulangeat
-	\end{itemize}. 
-
+	\begin{column}{0.19\linewidth}
+		\includegraphics[width=0.15\paperwidth]{Figs/logo/logo_12_MRN.png}	
+	\end{column}
+	\begin{column}{0.22\linewidth}
+		\includegraphics[width=0.21\paperwidth]{Figs/logo/logo_14_CAN.png}	
+	\end{column}
+	\begin{column}{0.17\linewidth}
+		\includegraphics[width=0.12\paperwidth]{Figs/logo/logo_7_domtar.png}	
+	\end{column}
+	\begin{column}{0.17\linewidth}
+		\includegraphics[width=0.13\paperwidth]{Figs/logo/logo_9_ouranos.png}
 	\end{column}
 \end{columns}
-
-
+\end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -558,7 +602,7 @@ The surface of the boreal-temperate forests ecotone is \textbf{expected to shift
 \begin{frame}{Calibration}{Extra slides}
 
 	\begin{equation}
-		P(D_{t1}|M_{t0}, Climate) = f(\overbrace{Climate, \underbrace{\hat{D}, \hat{M}}_\text{Step 1. RandomForest}}^\text{ Step 2. Multinomial regression})
+		P(D_{t1}|M_{t0}, Climate) = f(\overbrace{Climate, \underbrace{\hat{D}, \hat{M}}_\text{Step 1. RandomForest}}^\text{ Step 2. Simulated anenaling})
 	\label{eq1}
 	\end{equation}
 

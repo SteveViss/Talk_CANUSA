@@ -13,8 +13,8 @@
    height="540"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="explicit.pdf">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="explicit.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.65129203"
-     inkscape:cx="323.05697"
-     inkscape:cy="257.53473"
+     inkscape:zoom="1.3076723"
+     inkscape:cx="659.53271"
+     inkscape:cy="29.89784"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -265,7 +265,7 @@
          y="773.98114">Annual mean temperature (1 cell)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:24.99879646px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato Bold"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24.99879646px;line-height:125%;font-family:Lato;-inkscape-font-specification:'Lato Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none"
        x="610.29926"
        y="880.35815"
        id="text4198-9"
@@ -273,7 +273,7 @@
          sodipodi:role="line"
          id="tspan4200-0"
          x="610.29926"
-         y="880.35815">Annual mean precipitation (1 cell)</tspan></text>
+         y="880.35815">Annual precipitation (1 cell)</tspan></text>
     <path
        style="fill:#1a1a1a;stroke:#1a1a1a;stroke-width:1.46494675px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 314.68353,915.38242 -12.87552,5.64864 -12.44102,-5.64864 12.44372,28.79261 z"
@@ -302,17 +302,17 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot4308-8"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none;font-family:Lato;-inkscape-font-specification:Lato"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none"
        transform="matrix(2.2317608,0,0,2.2317608,1401.8607,2287.4927)"><flowRegion
          id="flowRegion4310-9"><rect
            id="rect4312-9"
-           width="148.7683"
-           height="39.565742"
+           width="176.52312"
+           height="37.509823"
            x="-354.0983"
            y="-573.80005"
-           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1a1a1a;font-family:Lato;-inkscape-font-specification:Lato" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:Lato;-inkscape-font-specification:Lato;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1a1a1a" /></flowRegion><flowPara
          id="flowPara4314-0"
-         style="font-size:13.4423008px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1a1a1a;font-family:Lato;-inkscape-font-specification:Lato Bold">State at the next step ?</flowPara></flowRoot>    <path
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.4423008px;line-height:125%;font-family:Lato;-inkscape-font-specification:'Lato Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1a1a1a">State at the next timestep ?</flowPara></flowRoot>    <path
        style="color:#000000;fill:#87d186;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.84073496;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 230.56018,983.6102 -24.8694,-16.56893 66.6555,0 66.6555,0 23.4658,15.31374 c 12.9062,8.42254 24.1145,15.9341 24.9074,16.69234 0.8651,0.82737 -25.2262,1.32925 -65.252,1.25515 l -66.6935,-0.1234 -24.8693,-16.5689 z"
        id="path4413"
