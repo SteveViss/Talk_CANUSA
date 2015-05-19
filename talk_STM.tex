@@ -1,0 +1,644 @@
+%% Suggestion dom:
+%% Plus fluide
+%% Résultats plus punché et vendre
+%% Timestep par années
+%% Diapo conclu
+%% Ajouter +4
+
+\documentclass[10pt,aspectratio=149]{beamer}
+
+\usecolortheme{Calm}
+\usetheme{Calm}
+
+%%\usepackage{minted}
+%%\usemintedstyle{pastie}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}
+\usepackage{xcolor}
+
+\usetikzlibrary{shapes, arrows, positioning}
+
+\setbeamertemplate{itemize items}[circle]
+
+\setbeamerfont{alerted text}{series=\bfseries}
+\setbeamertemplate{caption}{\insertcaption} \setbeamertemplate{caption label separator}{}
+
+\author{Steve Vissault, Matthew Talluto, \\
+Isabelle Boulangeat and Dominique Gravel}
+\title{Difficult migration of temperate tree species \\
+in boreal forest under climate change?}
+\date{\today}
+\institute{Université du Québec à Rimouski}
+
+
+\begin{document}
+\begin{frame}[plain]
+   \titlepage  
+\end{frame}
+
+%%% Keys
+%1. Le titre
+%2. Travail collaboratif qui regroupe plusieurs chercheurs du laboratoire d'écologie théorique de dominiaue gravel
+%3. Fruit de 1 ans de travail dans le cadre de ma maitrise
+%4. Cette présentation a pour objectif de montrer quelques résultats préliminaires
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Context
+
+\begin{frame}{Context}{The boreal-temperate ecotone}
+
+The surface of the boreal-temperate forests ecotone is \textbf{expected to shift over the next 100 years}.
+
+\begin{figure}
+	\includegraphics[width=.70\paperwidth]{Figs/ecotone.pdf}
+\end{figure}
+
+   \paper{Goldblum and Rig, 2010}
+\end{frame}
+
+%% 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Context
+
+\begin{frame}{Context}{The boreal-temperate ecotone}
+
+1. The location of this ecotone is \textbf{responsive to climate}.
+
+\begin{figure}
+	\includegraphics[width=.70\paperwidth]{Figs/climecotone.png}
+\end{figure}
+
+   \paper{Goldblum and Rig, 2010}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SDM
+
+\begin{frame}[t]{Context}{Predicted future species distribution}
+
+2. Several temperate forest species are predicted to \textbf{shift northward} under climate change
+\vspace{-1.75em}
+	  \begin{columns}[t]
+        \centering
+
+        \begin{column}{0.45\linewidth}
+	        \centering
+	        \begin{figure}
+	          \includegraphics[width=0.75\linewidth]{Figs/sugar.jpg}
+	           \vspace{-1em}
+	          \caption{\textbf{Sugar maple}}
+	          \vspace{-2.5em}
+	        \end{figure}
+	        \begin{figure}
+	          \includegraphics[width=0.75\linewidth]{Figs/birch.jpg}
+	           \vspace{-1em}
+	          \caption{\textbf{Yellow birch}}
+	          \vspace{-2.5em}
+	        \end{figure}
+        \end{column}
+
+        \begin{column}{0.45\linewidth}
+	        \centering
+	        \begin{figure}
+	          \includegraphics[width=0.75\linewidth]{Figs/oak.jpg}
+	           \vspace{-1em}
+	          \caption{\textbf{Red oak}}
+	          \vspace{-2.5em}
+	        \end{figure}
+	        \begin{figure}
+	          \includegraphics[width=0.75\linewidth]{Figs/ash.jpg}
+	           \vspace{-1em}
+	          \caption{\textbf{American ash}}
+	          \vspace{-2.5em}
+	        \end{figure}
+        \end{column}
+      \end{columns}
+
+
+
+   \paper{McKenney \textit{et al}, 2007; Woodall \textit{et al}, 2008; Iverson and Prasad, 2002. Web illustrations}
+\end{frame}
+
+%%% SDM are limited in this study context
+% Centered on species
+% Abiotic conditions (e.g. Climate, soil)
+% Spatially implicit
+% Instantaneous dynamic
+			  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SDM
+
+\begin{frame}[t]{Context}{Predicted future species distribution}
+
+2. Several temperate forest species are predicted to \textbf{shift northward} under climate change
+	
+% Commencer à aborder le take home
+
+	\begin{figure}
+		\includegraphics[width=.40\paperwidth]{Figs/sugar_map_distrib.jpg}
+	\caption{ \textbf{Future climate enveloppe of Sugar maple (2071-2100)}}
+	\end{figure}
+
+   \paper{McKenney \textit{et al}, 2007}
+
+%%% Introduction take home: Dissociation 
+
+\end{frame}
+
+%%% SDM are limited in this study context
+% Centered on species
+% Abiotic conditions (e.g. Climate, soil)
+% Spatially implicit
+% Instantaneous dynamic
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Tool
+
+%%% Quand on s'intéresse au changements d'aire de répartition d'un communauté, deux processus sont à prendre en considérations:
+\begin{frame}{Context}{Limits and difficulties in this study context}
+
+\textbf{Forest have:}
+		\begin{enumerate}
+			\item Limited dispersions
+			\item Slow population dynamics
+			\item Interspecific competition
+		\end{enumerate}
+\vspace{1em}
+	%% remplacer par titre des axes
+	\pause
+	\alert{These components will be affected by future climate}
+  \paper{Travis \textit{et al}, 2013}
+\end{frame}
+
+%% Demographical process
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Tools
+
+\begin{frame}{Context}{Modelling compromise}
+		\begin{figure}
+			\includegraphics[width=1.2\paperheight]{Figs/schema_models.pdf}
+		\end{figure}
+\paper{Scheller and Mladenoff \textit{et al}, 2006; Kriticos \textit{et al}, 2013}
+%%% SDMs implicit demography/interaction
+%%% STMs demo implicit
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Objective
+
+%%% 1. L'un des objectifs de ce mémoire consiste à évaluer les changements dans l'aire de répartition de la communauté de la forêt nordique du Québec ainsi que son taux de migration sous l'effet des changements climatiques 
+
+%%% 2. Lorsque l'on parle de migration et de changement d'aire de répartition d'une espèce dans ce cas-ci d'une communauté, on s'intéresse particulièrement à la distance et au de migration. 
+
+%%% Carte domaine bioclimatique + renforcer dichotomie fonctionnement écosystème
+
+\begin{frame}{Study objective}
+
+\textbf{Main objective:} Assess range shift and migration rates of the temperate forest community toward boreal forest under climate change.
+
+\pause 
+
+\vspace{1em}
+\textbf{Why?}
+		\begin{itemize}
+			\item Predict the future distribution of temperate species community in Quebec
+		 	\item Improve and adapt our forests management practices under climate change
+		\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Generality of the model 
+
+
+\begin{frame}{New approach}{States and Transitions Model}
+
+%% Passer plus de temps sur les transitions
+
+\begin{columns}[t]
+	\begin{column}[t]{.40\paperwidth}
+		\begin{figure}
+			\small{\input{Figs/fig_wo_params.tikz}}
+		\end{figure}
+	\end{column}
+	\begin{column}{.50\paperwidth}
+	\textbf{Model Description}
+		\begin{itemize}
+			\item Lanscape scale
+			\item \textbf{4 States:}
+			\begin{itemize}
+				\item \textcolor{Temperate}{\textbf{T}}, Temperate
+				\item \textcolor{Boreal}{\textbf{B}}, Boreal
+				\item \textcolor{Mixed}{\textbf{M}}, Mixed
+				\item \textcolor{Regeneration}{\textbf{R}}, corresponds to a post-disturbance
+			\end{itemize}
+			\item Spatially explicit and stochastic model
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Generality of the model 
+
+% \begin{frame}{New approach}{Classification}
+
+% \begin{columns}[t]
+% 	\begin{column}[t]{.40\paperwidth}
+% 		\begin{figure}
+% 			\small{\input{Figs/fig_wo_params.tikz}}
+% 		\end{figure}
+% 	\end{column}
+% 	\begin{column}{.50\paperwidth}
+% 		\centering\textbf{Criteria:} Presence/absence 
+% 	\begin{table}
+% 	\scriptsize
+% 	\centering
+% 		\begin{tabular}{|c|c|}
+% 		\hline
+% 		\textbf{State} & \textbf{Composition}            \\ \hline
+% 		\textcolor{Boreal}{\textbf{B}}     & White spruce       \\
+% 		\textcolor{Boreal}{\textbf{B}}     & Black spruce       \\
+% 		\textcolor{Boreal}{\textbf{B}}     & Jack pine        \\
+% 		\textcolor{Boreal}{\textbf{B}}     & Balsam fir, etc.        \\ \hline
+% 		\textcolor{Temperate}{\textbf{T}}     & White ash        \\
+% 		\textcolor{Temperate}{\textbf{T}}     & Red maple   \\
+% 		\textcolor{Temperate}{\textbf{T}}     & Sugar maple \\
+% 		\textcolor{Temperate}{\textbf{T}}     & American beech, etc.    \\ \hline
+% 		\textcolor{Mixed}{\textbf{M}}     & Presence of both species (\textcolor{Temperate}{\textbf{T}} and \textcolor{Boreal}{\textbf{B}}) \\ \hline
+% 		\textcolor{Regeneration}{\textbf{R}}     &  $Ba  \leq 10m_2/ha $  \\ \hline
+% 		\end{tabular}
+% 		\caption{\scriptsize \textbf{*}\textit{Ba} means basal area ($m_{2}$/ha)}
+% 		\end{table}
+% 	\end{column}
+% \end{columns}
+
+% \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Paremeters description : Disturbance
+
+\begin{frame}{New approach}{States and Transitions Model}
+
+%% Replacer par les noms à la place des paramètres
+
+\begin{columns}[t]
+	\begin{column}[t]{.40\paperwidth}
+		\begin{figure}
+			\small{\input{Figs/fig_params_dist.tikz}}
+		\end{figure}
+	\end{column}
+	\begin{column}[t]{.50\paperwidth}
+	\textbf{Ecological processes}:
+	\begin{itemize}
+		\item Disturbance
+	\end{itemize}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Paremeters description : Succession
+
+\begin{frame}{New approach}{States and Transitions Model}
+
+
+\begin{columns}[t]
+	\begin{column}[t]{.40\paperwidth}
+		\begin{figure}
+			\small{\input{Figs/fig_params_succession.tikz}}
+		\end{figure}
+	\end{column}
+	\begin{column}[t]{.50\paperwidth}
+	\textbf{Ecological processes}:
+	\begin{itemize}
+		\item Disturbance
+		\item Succession
+	\end{itemize}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Paremeters description : Colonisation
+
+\begin{frame}{New approach}{States and Transitions Model}
+
+
+\begin{columns}[t]
+	\begin{column}[t]{.40\paperwidth}
+		\begin{figure}
+			\small{\input{Figs/fig_params_colo.tikz}}
+		\end{figure}
+	\end{column}
+	\begin{column}[t]{.50\paperwidth}
+	\textbf{Ecological processes}:
+	\begin{itemize}
+		\item Disturbance
+		\item Succession
+		\item Colonization
+	\end{itemize}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Paremeters description : Exclusion
+
+\begin{frame}{New approach}{States and Transitions Model}
+
+
+\begin{columns}[t]
+	\begin{column}[t]{.40\paperwidth}
+		\begin{figure}
+			\small{\input{Figs/fig_params_compet.tikz}}
+		\end{figure}
+	\end{column}
+	\begin{column}[t]{.50\paperwidth}
+	\textbf{Ecological processes}:
+	\begin{itemize}
+		\item Disturbance
+		\item Succession
+		\item Colonization
+		\item Competitive exclusion
+	\end{itemize}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Paremeters description : Full
+
+\begin{frame}{New approach}{States and Transitions Model}
+
+%% Replacer par les noms à la place des paramètres
+
+\begin{columns}[t]
+	\begin{column}[t]{.40\paperwidth}
+		\begin{figure}
+			\small{\input{Figs/fig_params_full.tikz}}
+		\end{figure}
+	\end{column}
+	\begin{column}[t]{.50\paperwidth}
+	\textbf{Ecological processes}:
+	\begin{itemize}
+		\item Disturbance
+		\item Succession
+		\item Colonization
+		\item Competitive exclusion
+	\end{itemize}
+	\vspace{1em}
+	\textbf{Each probability depends on}:
+		\begin{itemize}
+			\item Proportion of states available in the neighborhood
+			\item Local climatic conditions (Precipitation, Temperature)
+		\end{itemize}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Data
+
+\begin{frame}{Data}{The quicc-for database}
+	\vspace{-1em}
+\begin{figure}
+	\includegraphics[width=.70\paperwidth]{Figs/QUICCFOR.pdf}
+\end{figure}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Data
+
+\begin{frame}{Calibration}{Data used}
+	
+	
+	\begin{columns}[t]
+	\begin{column}[c]{.45\paperwidth}
+	\begin{enumerate}
+	\onslide<1->{
+	\item \textbf{Classify state of each plot}
+		\begin{itemize}
+			\item Plot remeasured
+			\item Transition observed between remeasurements
+		\end{itemize}}
+
+	\onslide<3->{\item \textbf{Compute state transition probabilities} based on the actual climate and neighbors plot states.}
+	\end{enumerate}
+	\end{column}
+	\begin{column}[c]{.50\paperwidth}
+	\vspace{-3em}
+	\onslide<2->{
+		\begin{figure}
+			\pause
+			\includegraphics[width=.51\paperwidth]{Figs/distrib_carto.pdf}
+		\end{figure}}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Transition probabilities
+
+\begin{frame}{Calibration}{Transition probabilities over climatic gradients}
+%% Mieux expliquer transition T vers M
+%% Inverser légende
+
+	  \begin{columns}[t]
+        \begin{column}{0.15\linewidth}
+        \vspace{-4em}
+        \begin{figure}
+			\small{\input{Figs/fig_exploparam.tikz}}
+		\end{figure}
+        \end{column}
+		\hspace{1em}
+        \begin{column}{0.82\linewidth}
+            \begin{figure}
+	          \includegraphics[width=1\linewidth]{Figs/betat.pdf}
+	        \end{figure}
+        \end{column}
+      \end{columns}
+	
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Explicit version 
+
+\begin{frame}{Simulations}{Predict the next timestep}
+
+		\begin{figure}
+			\includegraphics[width=1.2\paperheight]{Figs/explicit.pdf}
+		\end{figure}
+		
+	
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Results
+
+\begin{frame}[t]{Results}{Predict the current landscape}
+
+		\begin{figure}
+			\centering\textbf{Current states distributions predicted on climatology: 1970-2000}
+			\includegraphics[width=0.9\paperwidth]{Figs/338_500ts_final_land.pdf}
+		\end{figure}
+
+%% Ajouter figure domaines bioclimatiques
+%% Prédiction avec le paysage à l'équilibre avec le climat
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Results
+
+\begin{frame}[t]{Results}{Predict the current landscape}
+
+		\begin{figure}
+			\centering\textbf{Temperature increase linearly (4°C): 2100}
+			\includegraphics[width=0.9\paperwidth]{Figs/338_withcc_final_land.pdf}
+		\end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Results
+
+\begin{frame}[t]{Results}{Migration rate predicted}
+
+		\begin{figure}
+			\includegraphics[width=0.9\paperwidth]{Figs/fut_range.pdf}
+		\end{figure}
+		%% Ajouter SDM
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 
+
+\begin{frame}{Summary}
+
+		\begin{enumerate}
+			\item Spatial dynamique, demography and species interactions constraint temperate migration
+			\item Slow temperate migration rate predicted by the STM
+			\item Tension between potential and realized distribution (at equilibrium with climate)
+		\end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Ajouter slide conclu
+% Take home: Création d'une tension entre distrib potentielle et distrib observé 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Results
+
+\begin{frame}[t]{Aknowledgements}
+\vspace{-1em}
+\begin{center}
+		\begin{figure}
+			\includegraphics[width=0.3\paperwidth]{logo.png}
+		\end{figure}
+		\vfill
+		\centering \small{\textbf{Funded by}}
+		\vfill
+		\begin{figure}
+			\includegraphics[width=0.2\paperwidth]{nserc.png}
+		\end{figure}
+		\vfill
+		\centering \small{\textbf{In collaboration with}}
+		\vfill
+\begin{columns}[t]
+	\begin{column}{0.19\linewidth}
+		\includegraphics[width=0.15\paperwidth]{Figs/logo/logo_11_ORMN.png}			
+	\end{column}
+	\begin{column}{0.19\linewidth}
+		\includegraphics[width=0.15\paperwidth]{Figs/logo/logo_12_MRN.png}	
+	\end{column}
+	\begin{column}{0.22\linewidth}
+		\includegraphics[width=0.21\paperwidth]{Figs/logo/logo_14_CAN.png}	
+	\end{column}
+	\begin{column}{0.17\linewidth}
+		\includegraphics[width=0.12\paperwidth]{Figs/logo/logo_7_domtar.png}	
+	\end{column}
+	\begin{column}{0.17\linewidth}
+		\includegraphics[width=0.13\paperwidth]{Figs/logo/logo_9_ouranos.png}
+	\end{column}
+\end{columns}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Biblio
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Extra Slides
+
+\begin{frame}{Calibration}{Extra slides}
+
+	\begin{equation}
+		P(D_{t1}|M_{t0}, Climate) = f(\overbrace{Climate, \underbrace{\hat{D}, \hat{M}}_\text{Step 1. RandomForest}}^\text{ Step 2. Simulated anenaling})
+	\label{eq1}
+	\end{equation}
+
+\end{frame}
+
+\begin{frame}{Bioclimatic domains}{Extra slides}
+
+	  \begin{columns}[t]
+        \begin{column}[c]{0.60\linewidth}
+		\begin{figure}
+			\centering \textbf{Landscape predicted by the STM}
+			\includegraphics[width=0.55\paperwidth]{Figs/338_500ts_final_land.pdf}
+		\end{figure}
+        \end{column}
+		\hspace{1em}
+        \begin{column}[c]{0.35\linewidth}
+		\begin{figure}
+			\centering \textbf{Bioclimatic domains in Quebec}
+			\includegraphics[width=0.30\paperwidth]{Figs/ss_veg_map.pdf}
+		\end{figure}
+        \end{column}
+      \end{columns}
+
+
+
+\end{frame}
+
+
+\begin{frame}{Proxy of the neighboors: SDM}{Extra slides}
+
+		\begin{figure}
+			\vspace{-5em}
+			\includegraphics[height=1\paperheight]{Figs/RF_proj_SDM.jpg}
+		\end{figure}
+
+\end{frame}
+
+
+\end{document}
